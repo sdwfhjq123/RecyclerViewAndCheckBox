@@ -33,11 +33,7 @@ class MyRecyclerViewAdapter() : RecyclerView.Adapter<MyRecyclerViewAdapter.ViewH
     //点击item选中CheckBox
     fun selectedItem(position: Int) {
         //对当前状态取反
-        if (map.get(position)!!) {
-            map.put(position, false);
-        } else {
-            map.put(position, true);
-        }
+        map[position] = !map[position]!!
         notifyItemChanged(position);
     }
 
